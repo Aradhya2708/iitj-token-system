@@ -23,7 +23,7 @@ func main() {
 		return
 	}
 	routers.Router()
-	err = http.ListenAndServe(":8080", nil)
+	err = http.ListenAndServe(":8080", routers.Router())
 	if err != nil {
 		fmt.Println(err)
 	}
